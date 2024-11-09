@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include<stdlib.h>
+#include <stdlib.h>
 
 #define lm 6
 #define ln 6
@@ -8,6 +8,7 @@
 #define m (1 << lm)
 #define n (1 << ln)
 #define p (1 << lp)
+
 void MATRIX_MUL(int A[m][n], int B[n][p], int C[m][p]);
 void software_matrix_mul(int A[m][n], int B[n][p], int C[m][p]) {
     for (int i = 0; i < m; i++) {
@@ -20,6 +21,7 @@ void software_matrix_mul(int A[m][n], int B[n][p], int C[m][p]) {
         }
     }
 }
+
 int main(){
  int comp=0;
     int A[m][n];
