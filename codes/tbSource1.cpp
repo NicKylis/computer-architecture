@@ -10,6 +10,7 @@
 #define p (1 << lp)
 
 void MATRIX_MUL(int A[m][n], int B[n][p], int C[m][p]);
+void software_matrix_mul(int A[m][n], int B[n][p], int C[m][p]);
 
 int main() {
  int comp=0;
@@ -56,6 +57,7 @@ int main() {
     return 0;
 }
 
+//Simple Matrix multiplication (A * B = C) without any accelaration, for testing
 void software_matrix_mul(int A[m][n], int B[n][p], int C[m][p]) {
     for (int i = 0; i < m; i++) {
         for (int j = 0; j < p; j++) {
