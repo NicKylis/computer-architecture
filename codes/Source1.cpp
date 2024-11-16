@@ -8,7 +8,7 @@
 #define n (1 << ln)
 #define p (1 << lp)
 
-void MATRIX_MUL(int A[m][n], int B[n][p], int C[m][p]) {
+void MATRIX_MUL(int A[n][m], int B[m][p], int C[n][p]) {
     // HLS PRAGMA directives gia optimization
     #pragma HLS ARRAY_PARTITION variable=A complete dim=2
     #pragma HLS ARRAY_PARTITION variable=B complete dim=1
@@ -16,12 +16,14 @@ void MATRIX_MUL(int A[m][n], int B[n][p], int C[m][p]) {
 
 
 #pragma HLS UNROLL
- for (int i = 0; i < m; i++) {
+ for (int i = 0; i < n; i++) {
         for (int j = 0; j < p; j++) {
-            for (int k = 0; k < n; k++) {
-            	//reduces loop overhead
+#pragma HLS PIPELINE  II=1
+            for (int k = 0; k < m; k++) {
+            //reduces loop overhead
                 C[i][j] += A[i][k] * B[k][j];
             }
+
         }
     }
 }
