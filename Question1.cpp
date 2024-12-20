@@ -15,7 +15,6 @@ void MATRIX_MUL(int A[n][m], int B[m][p], int C[n][p]) {
     #pragma HLS ARRAY_PARTITION variable=C complete dim=2
 
 
-#pragma HLS UNROLL
  for (int i = 0; i < n+1; i++) {
         for (int j = 0; j <p+1; j++) {
 #pragma HLS PIPELINE  II=1
