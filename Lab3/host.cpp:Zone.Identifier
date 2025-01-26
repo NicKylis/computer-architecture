@@ -1,0 +1,4 @@
+[ZoneTransfer]
+ZoneId=3
+ReferrerUrl=https://webmail.auth.gr/imp/dynamic.php?page=mailbox
+HostUrl=https://webmail.auth.gr/services/download/?app=imp&actionID=download_attach&id=2&muid=%7B6%7DDrafts19&view_token=f9ZgReS3DHUzNRwofJPqoqC&fn=%2Fhost.cpp
