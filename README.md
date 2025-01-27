@@ -5,3 +5,5 @@ This project involves designing and implementing a computer architecture using F
 - **I/O Interfaces**: Designing interfaces for input and output operations.
 - **Instruction Set Architecture (ISA)**: Defining the algorithm that the processor will execute.
 - **Simulation and Testing**: Using simulation tools to test and validate the architecture.
+
+Authrors: Nikolaos Kylintireas, Kokoni Foteini
